@@ -1,8 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:shared/env.dart';
+import 'package:shared/ui/app_scroll_behavior.dart';
+import 'onboarding/onboarding.dart';
 
 /// Flutter code sample for [CarouselView].
 
-void main() => runApp(const CarouselExampleApp());
+void main() => runApp( App());
+class App extends StatelessWidget {
+  static String _pkg = "intelliprep";
+  static String? get pkg => Env.getPackage(_pkg);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      scrollBehavior: AppScrollBehavior(),
+      debugShowCheckedModeBanner: false,
+      home: OnboardingView(title: 'Gooey Edge Demo'),
+    );
+  }
+}
 
 class CarouselExampleApp extends StatelessWidget {
   const CarouselExampleApp({super.key});
