@@ -13,7 +13,19 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final theme = ThemeData(
+      brightness: Brightness.dark,
+      canvasColor: Color(0xFF161719),
+      textTheme: Theme.of(context).textTheme.apply(bodyColor: Colors.white, fontFamily: 'OpenSans'),
+      iconTheme: Theme.of(context).iconTheme.copyWith(color: Colors.white),
+    );
     return MaterialApp(
+      theme: theme.copyWith(
+        colorScheme: theme.colorScheme.copyWith(
+          secondary: Color(0xffc932d9),
+        ),
+      ),
       scrollBehavior: AppScrollBehavior(),
       debugShowCheckedModeBanner: false,
       home: OnboardingView(title: 'Gooey Edge Demo'),

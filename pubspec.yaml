@@ -124,3 +124,11 @@ flutter:
         - asset: fonts/DM-Serif-Display/DMSerifDisplay-Regular.ttf
         - asset: fonts/DM-Serif-Display/DMSerifDisplay-Italic.ttf
           style: italic
+
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins-Regular.ttf
+        - asset: fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: fonts/Poppins-Bold.ttf
+          weight: 700

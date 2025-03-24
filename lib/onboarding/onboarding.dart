@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../main.dart';
+import '../offering/demo.dart';
+
 import 'content_card.dart';
 import 'gooey_carousel.dart';
 
@@ -22,26 +24,27 @@ class _OnboardingViewState extends State<OnboardingView> {
           ContentCard(
             onButtonPressed: (){
               Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const CarouselExampleApp()),
+               // MaterialPageRoute(builder: (context) => const CarouselExampleApp()),
+                MaterialPageRoute(builder: (context) =>  SafeArea(child: DrinkRewardsListDemo())),
               );
             },
             color: 'Red',
             altColor: Color(0xFF4259B2),
-            title: "Data Structures",
+            title: "Data Structures Algorithms",
             subtitle: 'Relax your mind and create inner peace with soothing sounds of nature.',
           ),
           ContentCard(
             onButtonPressed: (){},
             color: 'Yellow',
             altColor: Color(0xFF904E93),
-            title: "Algorithms",
+            title: "System Design",
             subtitle: 'Melt your stresses and anxieties away with 50+ breathing exercises.',
           ),
           ContentCard(
             onButtonPressed: (){},
             color: 'Blue',
             altColor: Color(0xFFFFB138),
-            title: "System Design",
+            title: "Get a mentor",
             subtitle: 'Enjoy a restful night’s sleep with relaxing activities and calm bedtime stories.',
           ),
         ],
