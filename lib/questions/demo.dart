@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
+import '../solutions/mail_view_page.dart';
 import '../topics/rounded_shadow.dart';
 import '../topics/styles.dart';
 import 'components/sprite_sheet.dart';
@@ -128,10 +129,18 @@ class ParticleSwipeDemoState extends State<ParticleSwipeDemo> with SingleTickerP
       physics: ClampingScrollPhysics(),
       itemBuilder: (BuildContext context, int index, _) {
         var item = _model[index];
-        return SwipeItem(
-            data: item,
-            isEven: index.isEven,
-            onSwipe: (key, {required action}) => _performSwipeAction(item, key, action));
+        return InkWell(
+          onTap: (){
+
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) =>  MailViewPage(id: 123,)),
+            );
+          },
+          child: SwipeItem(
+              data: item,
+              isEven: index.isEven,
+              onSwipe: (key, {required action}) => _performSwipeAction(item, key, action)),
+        );
       },
     );
   }
