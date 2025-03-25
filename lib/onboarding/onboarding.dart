@@ -44,7 +44,7 @@ class _OnboardingViewState extends State<OnboardingView> {
             onButtonPressed: (){},
             color: 'Blue',
             altColor: Color(0xFFFFB138),
-            title: "Get a mentor",
+            title: "Mock Tests",
             subtitle: 'Enjoy a restful night’s sleep with relaxing activities and calm bedtime stories.',
           ),
         ],

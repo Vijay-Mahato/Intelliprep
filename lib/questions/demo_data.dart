@@ -19,13 +19,13 @@ class Email {
 class DemoData {
   final List<Email> _inbox = [
     Email(
-      from: 'Jeffrey Evans',
+      from: 'Infosys',
       subject: 'Re: Workshop Preperation',
       body:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at viverra sem. Suspendisse gravida magna in lorem vehicula…',
     ),
     Email(
-      from: 'Jordan Chow',
+      from: 'Tech Mahindra',
       isRead: true,
       subject: 'Reservation Confirmed for Brooklyn',
       body:
