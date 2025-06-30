@@ -53,4 +53,14 @@ The **Mentor Section** allows users to:
 
 ## 📁 Folder Structure
 
-
+lib/
+├── core/ # Constants, utilities, global configs
+├── features/
+│ ├── dsa/ # DSA question screens & models
+│ ├── system_design/ # System design section
+│ ├── mentor/ # Mentor UI and logic
+│ └── home/ # Dashboard and landing screens
+├── shared/
+│ ├── theme/ # App theme and colors
+│ └── widgets/ # Custom widgets
+└── main.dart
